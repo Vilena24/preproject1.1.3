@@ -1,4 +1,8 @@
-# Default ignored files
-.idea
+# IntelliJ IDEA
+.idea/
 *.iml
-target
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
