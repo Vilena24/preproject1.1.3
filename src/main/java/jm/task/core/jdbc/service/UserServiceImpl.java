@@ -1,6 +1,7 @@
 package jm.task.core.jdbc.service;
 
 import jm.task.core.jdbc.dao.UserDao;
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 
@@ -8,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class UserServiceImpl extends UserService {
-    private final UserDao userDao = new UserDaoJDBCImpl();
+    private final UserDao userDao = new UserDaoHibernateImpl();
 
 
     @Override
@@ -40,7 +41,7 @@ public class UserServiceImpl extends UserService {
         if (users == null){
             users = Collections.emptyList();
         }
-        users.forEach(System.out::println);
+        //users.forEach(System.out::println);
         return users;
     }
 

@@ -7,6 +7,7 @@
     <groupId>org.example</groupId>
     <artifactId>TaskJDBC</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <build>
         <plugins>
             <plugin>
@@ -22,32 +23,34 @@
     </build>
 
     <dependencies>
-<!--         Ваши зависимости-->
-         <!-- https://mvnrepository.com/artifact/junit/junit -->
-         <dependency>
-             <groupId>junit</groupId>
-             <artifactId>junit</artifactId>
-             <version>4.12</version>
-             <scope>test</scope>
-         </dependency>
-
+        <!-- Зависимость для тестов -->
         <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>8.0.33</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
-            <version>1.0.2.Final</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.4</version>
         </dependency>
 
+        <!-- Зависимость для Hibernate Core -->
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.3.10.Final</version>
+            <version>6.4.4.Final</version>
         </dependency>
-     </dependencies>
 
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <!-- Зависимость для PostgreSQL -->
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version> <!-- Используй актуальную версию, если необходимо -->
+        </dependency>
+
+
+    </dependencies>
 </project>
